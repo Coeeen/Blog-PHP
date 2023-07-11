@@ -1,0 +1,39 @@
+CREATE TABLE komentarze (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    wpis_id INT(11),
+    nick VARCHAR(100),
+    komentarz TEXT
+);
+
+
+CREATE TABLE uzytkownicy (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(50),
+    haslo VARCHAR(255),
+    email VARCHAR(100)
+);
+
+CREATE TABLE wpisy (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    tytul VARCHAR(255) NOT NULL,
+    tresc TEXT NOT NULL,
+    autor VARCHAR(100) NOT NULL,
+    data_dodania DATETIME,
+    obrazek VARCHAR(255)
+);
+
+
+
+
+
+
+
+TO NIE DZIALA
+
+CREATE TABLE wiadomosci (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    temat VARCHAR(100) NOT NULL,
+    wiadomosc TEXT NOT NULL,
+    przeczytana TINYINT(1)
+);
